@@ -49,7 +49,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Innehållsförteckning</h2>
    
   <ul>
-  <li><a href="#teoretiska-frågor" id="toc-teoretiska-frågor" class="nav-link active" data-scroll-target="#teoretiska-frågor">Teoretiska frågor</a></li>
+  <li><a href="#del-1" id="toc-del-1" class="nav-link active" data-scroll-target="#del-1">Del 1</a>
+  <ul class="collapse">
+  <li><a href="#teoretiska-frågor" id="toc-teoretiska-frågor" class="nav-link" data-scroll-target="#teoretiska-frågor">Teoretiska frågor</a></li>
+  </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Andra Format</h2><ul><li><a href="kunskapskontroll_ai.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
 </div>
@@ -74,7 +77,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>D # Del 1</p>
+<section id="del-1" class="level1">
+<h1>Del 1</h1>
 <section id="teoretiska-frågor" class="level2">
 <h2 class="anchored" data-anchor-id="teoretiska-frågor">Teoretiska frågor</h2>
 <p>Denna del syftar till att vi ska börja tänka på vissa grundläggande och centrala koncept inom maskininlärning som är en central del inom AI. Svara gärna kort och koncist. Inkludera svaren som ett sista avsnitt i din rapport.</p>
@@ -153,15 +157,288 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>Exempel på modeller som används för klassificeringsproblem inkluderar logistisk regression, support vector machines, beslutsträd, Ensemble learning, random forest.</p>
 </blockquote>
-<p>Boken S151: &gt; Tillämpningsområden för klassificeringsproblem kan vara:</p>
+<p>Boken S151:</p>
+<blockquote class="blockquote">
+<p>Tillämpningsområden för klassificeringsproblem kan vara:</p>
+</blockquote>
+<blockquote class="blockquote">
 <ul>
-<li><p>Kundanalys - prediktera om en kund kommer att köpa en produkt eller inte, att segmentera kunder i olika grupper baserat på deras beteende, eller att prediktera kundlojalitet.</p></li>
-<li><p>Sjukvård - att prediktera om en patient har en viss sjukdom eller inte (sjuk eller frisk) baserat på medicinska data såsom blodtryck, puls och så vidare.</p></li>
-<li><p>Bildigenkänning - att klassificera bilder i olika kategorier, såsom att identifiera om en bild innehåller en katt eller en hund.</p></li>
-<li><p>Anomalidetektion - att identifiera defekta produkter i en tillverkningsprocess, att upptäcka bedrägerier i finansiella transaktioner, eller att identifiera avvikande beteende i nätverkssäkerhet.</p></li>
-<li><p>Finans - Preddiktera om en aktie kommer att gå upp eller ner baserat på exempelvis företagsinformation såsom lönsamhet, omsättning och så vidare.</p></li>
-<li><p>Kreditrisk - Bedöma om en bankkund ska beviljas ett lån eller inte baserat på faktorer som inkomst, ålder, civilstånd och så vidare.</p></li>
+<li>Kundanalys - prediktera om en kund kommer att köpa en produkt eller inte, att segmentera kunder i olika grupper baserat på deras beteende, eller att prediktera kundlojalitet.</li>
 </ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Sjukvård - att prediktera om en patient har en viss sjukdom eller inte (sjuk eller frisk) baserat på medicinska data såsom blodtryck, puls och så vidare.</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Bildigenkänning - att klassificera bilder i olika kategorier, såsom att identifiera om en bild innehåller en katt eller en hund.</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Anomalidetektion - att identifiera defekta produkter i en tillverkningsprocess, att upptäcka bedrägerier i finansiella transaktioner, eller att identifiera avvikande beteende i nätverkssäkerhet.</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Finans - Preddiktera om en aktie kommer att gå upp eller ner baserat på exempelvis företagsinformation såsom lönsamhet, omsättning och så vidare.</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Kreditrisk - Bedöma om en bankkund ska beviljas ett lån eller inte baserat på faktorer som inkomst, ålder, civilstånd och så vidare.</li>
+</ul>
+</blockquote>
+<ol start="7" type="1">
+<li>Vad är en ”confusion matrix”?</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="./Exempel.confusion.matrix.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
+</div>
+<p>Boken S155</p>
+<blockquote class="blockquote">
+<p>en confusion matrix är en matris som visualiserar hur väl en modell presterar genom att jämföra sanna och predikterade värden.</p>
+</blockquote>
+<ol start="8" type="1">
+<li>Hur definieras Precision? Hur tolkas Precision?</li>
+</ol>
+<p>Boken S159:</p>
+<blockquote class="blockquote">
+<p>Precision mäter andelen av de positiva prediktionerna som faktiskt är korrekta. Det beräknas som: Precision = TP / (TP + FP) där TP är antalet sanna positiva och FP är antalet falska positiva.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Precision tolkas som hur många av de positiva prediktionerna som är korrekta. En hög precision indikerar att modellen har få falska positiva, vilket är viktigt i situationer där det är kostsamt att göra en falsk positiv prediktion, såsom i medicinsk diagnostik eller bedrägeribekämpning.</p>
+</blockquote>
+<ol start="9" type="1">
+<li>Hur definieras Recall? Hur tolkas Recall?</li>
+</ol>
+<p>Boken S159:</p>
+<blockquote class="blockquote">
+<p>Recall mäter andelen av den positiva klassen som har predikterats korrekt. Det beräknas som: Recall = TP / (TP + FN) där TP är antalet sanna positiva och FN är antalet falska negativa.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Recall tolkas som hur många av de faktiska positiva som har identifierats. En hög recall indikerar att modellen har få falska negativa, vilket är viktigt i situationer där det är kostsamt att missa en positiv prediktion, såsom i medicinsk diagnostik eller detektering av sällsynta sjukdomar.</p>
+</blockquote>
+<ol start="10" type="1">
+<li>Göran påstår att datan antingen är ”ordinal” eller ”nominal”. Julia säger att detta måste tolkas. Hon ger ett exempel med att färger såsom {röd, grön, blå} generellt sett inte har någon inbördes ordning (nominal) men om du har en röd skjorta så är du vackrast på festen (ordinal) – vem har rätt?</li>
+</ol>
+<p>Boken S42:</p>
+<blockquote class="blockquote">
+<p>Julia har rätt – det handlar om tolkning, inte om att datan i sig alltid är av en viss typ oberoende av sammanhang.</p>
+</blockquote>
+<ol start="11" type="1">
+<li>Vad är skillnaden mellan parametrar och hyperparametrar i en maskininlärningsmodell? Ge ett exempel på varje och förklara varför de inte kan optimeras på samma sätt.</li>
+</ol>
+<p>Boken S35:</p>
+<blockquote class="blockquote">
+<p>En hyperparameter svarar på frågan “hur vi lär oss” och en parameter svarar på frågan “vad vi lärt oss”.</p>
+</blockquote>
+<ol start="12" type="1">
+<li>Förklara skillnaden mellan overfitting och underfitting i en maskininlärningsmodell. Beskriv även hur man kan upptäcka respektive åtgärda dem.</li>
+</ol>
+<blockquote class="blockquote">
+<p>Overfitting (överanpassning)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Vad är det?</p>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Modellen är för komplex och lär sig inte bara mönster utan också brus och slumpmässiga variationer i träningsdatan.</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<p>Kännetecken:</p>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Mycket låg träningsförlust (nästan perfekt på träningsdata)</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Mycket hög valideringsförlust (presterar dåligt på ny data)</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Stort gap mellan tränings- och valideringsfel</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<p>Hur upptäcker man dem? * Genom att utvärdera modellens prestanda på både tränings- och valideringsdata. Om modellen presterar mycket bättre på träningsdata än på valideringsdata, kan det vara ett tecken på överanpassning.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Hur åtgär</p>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Förenkla modellen</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Regularisering</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Öka mängden träningsdata</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<p>Underfitting (underanpassning)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Vad är det?</p>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Modellen är för enkel och misslyckas med att fånga det underliggande mönstret i träningsdatan.</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<p>Kännetecken:</p>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Hög valideringsförlust (ungefär lika hög som träningsförlust)</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Modellen presterar dåligt på både gammal och ny data</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<p>Analogi:</p>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Försöka beskriva en parabel med en rät linje – du missar kurvan helt.</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<p>Hur upptäcker man dem?</p>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Inlärningskurvan planar ut på en hög nivå (både train och val)</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Modellen är sämre än enkel baseline (t.ex. medelvärde)</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Träningsfelet är inte lågt nog</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<p>Hur åtgärdar man dem?</p>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Öka modellens komplexitet</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Förbättra träningsprocessen</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Förbättra data</li>
+</ul>
+</blockquote>
+<ol start="13" type="1">
+<li>Hur funkar OvO och OvR algoritmerna?</li>
+</ol>
+<blockquote class="blockquote">
+<p>OvO (One-vs-One)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Så fungerar det:</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>För K klasser tränar du K(K-1)/2 binära klassificerare – en för varje par av klasser.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Varje klassificerare lär sig att skilja på exakt två klasser (ignorerar alla andra).</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Prediktion: Kör alla modeller. Varje modell “röstar” på en av sina två klasser. Vinnaren = den klass som får flest röster.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>OvR (One-vs-Rest)</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Så fungerar det:</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>För K klasser tränar du K binära klassificerare:</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Varje klassificerare lär sig att skilja på en klass (positiv) mot alla andra klasser (negativ).</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Prediktion: Kör alla modeller. Varje modell ger en sannolikhet för sin klass. Vinnaren = den klass med högst sannolikhet.</p>
+</blockquote>
+<ol start="14" type="1">
+<li>Vad är intuitionen bakom att regularisera en modell?</li>
+</ol>
+<blockquote class="blockquote">
+<p>Regularisering handlar i grunden om att straffa komplexitet – att medvetet göra modellen lite sämre på träningsdatan för att den ska bli mycket bättre på ny data.</p>
+</blockquote>
+<ol start="15" type="1">
+<li>Vad är Bias Variance Trade-off?</li>
+</ol>
+<blockquote class="blockquote">
+<p>Bias-Variance Trade-off handlar om att hitta en balans mellan två typer av fel i en modell:</p>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Bias (fördom) – fel som uppstår när modellen är för enkel och inte kan fånga det underliggande mönstret i datan (underfitting).</li>
+<li>Variance (varians) – fel som uppstår när modellen är för komplex och lär sig brus och slumpmässiga variationer i träningsdatan (overfitting).</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<p>En modell med hög bias och låg varians kommer att underfitta, medan en modell med låg bias och hög varians kommer att överfitta. Målet är att hitta en modell som har en bra balans mellan bias och varians för att uppnå optimal generalisering på nya data.</p>
+</blockquote>
+<ol start="16" type="1">
+<li>Varför är mer komplexa modeller inte alltid bättre?</li>
+</ol>
+<blockquote class="blockquote">
+<p>Mer komplexa modeller är inte alltid bättre eftersom de kan leda till överfitting, där modellen lär sig inte bara de underliggande mönstren i träningsdatan utan också brus och slumpmässiga variationer. Detta resulterar i att modellen presterar mycket bra på träningsdatan men dåligt på ny data. Dessutom kan mer komplexa modeller vara svårare att tolka och kräva mer beräkningsresurser, vilket inte alltid är önskvärt eller nödvändigt beroende på problemet som ska lösas. I många fall kan en enklare modell med rätt regularisering och tillräcklig data ge bättre generalisering än en mer komplex modell.</p>
+</blockquote>
+<ol start="17" type="1">
+<li>Kan du kort förklara hur fixa men okända parametrarna 𝛽0, 𝛽1, … , 𝛽p skattas med hjälp av MSE? &gt; För att skatta de okända parametrarna 𝛽0, 𝛽1, … , 𝛽p i en regressionsmodell använder vi metoden för minsta kvadrater (OLS), som försöker minimera summan av kvadrerade residualer (MSE).</li>
+</ol>
+<blockquote class="blockquote">
+<p>MSE (Mean Squared Error) beräknas som: MSE = (1/n) * Σ(yi - ŷi)² där yi är det faktiska värdet, ŷi är det predikterade värdet från modellen, och n är antalet observationer.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Genom att minimera MSE kan vi hitta de värden på 𝛽0, 𝛽1, … , 𝛽p som gör att modellen bäst passar träningsdatan. Detta görs vanligtvis genom att ta derivatan av MSE med avseende på varje parameter och sätta den lika med noll för att lösa för parametrarna.</p>
+</blockquote>
+<ol start="18" type="1">
+<li>I frågan ovan, varför används MSE och inte RMSE? Vad är skillnaden?</li>
+</ol>
+<blockquote class="blockquote">
+<p>MSE (Mean Squared Error) används ofta i optimeringsprocessen för att skatta parametrarna i en regressionsmodell eftersom det är en kvadratisk funktion som är lätt att derivera och optimera. MSE straffar större fel mer än mindre fel, vilket kan hjälpa till att hitta en bättre passform för modellen. RMSE (Root Mean Squared Error) är bara roten ur MSE och ger en uppskattning av felstorleken i samma enheter som data, men det är inte lika lätt att derivera och optimera som MSE. Därför används MSE i själva optimeringsprocessen, medan RMSE ofta används som ett mer intuitivt mått på modellens prestanda efter att parametrarna har skattats.</p>
+</blockquote>
+<ol start="19" type="1">
+<li><p>Vad betyder övervakad respektive oövervakad maskininlärning? &gt; Övervakad maskininlärning innebär att modellen tränas på en dataset som innehåller både indata (features) och motsvarande utdata (labels). Målet är att lära sig en funktion som kan mappa indata till utdata, så att modellen kan göra korrekta prediktioner på nya, osedda data. Exempel på övervakade algoritmer inkluderar linjär regression, logistisk regression, beslutsträd och support vector machines.<br>
+&gt; Oövervakad maskininlärning innebär att modellen tränas på en dataset som endast innehåller indata (features) utan några motsvarande utdata (labels). Målet är att hitta mönster, strukturer eller grupperingar i datan utan någon specifik vägledning. Exempel på oövervakade algoritmer inkluderar klustring (t.ex. K-means), dimensionalitetsreduktion (t.ex. PCA) och associationsregler (t.ex. Apriori).</p></li>
+<li><p>Vad är prediktions- respektive konfidensintervall? Vilket intervall är bredast och varför? &gt; Ett prediktionsintervall ger en uppskattning av det område där det faktiska värdet för en ny observation sannolikt kommer att ligga. Ett konfidensintervall ger en uppskattning av det område där den verkliga parametern ligger. Prediktionsintervallet är alltid bredare än konfidensintervallet eftersom det tar hänsyn till både osäkerhet i modellens skattningar och den variabilitet som finns i de nya observationerna.</p></li>
+</ol>
+</section>
 </section>
 
 </main>
